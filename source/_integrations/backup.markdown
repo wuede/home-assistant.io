@@ -19,6 +19,8 @@ related:
     title: Configuration file
   - docs: /common-tasks/os/#restoring-a-backup
     title: Home Assistant Operating System- Restoring a backup
+  - docs: /docs/configuration/secrets/
+    title: Secrets.yaml file
 ---
 
 The **Backup** {% term integration %} is used for {% term "Home Assistant Core" %} and {% term "Home Assistant Container" %} installations to create and download backups. This backup file can be used if you migrate to {% term "Home Assistant Operating System" %}.
@@ -39,7 +41,8 @@ All parameters for the `backup.create` action are optional.
 
 {% configuration_basic %}
 password:
-  description: Encrypt the backup file with a password.
+  description: >-
+    Encrypt the backup file with a password. When restoring a password-protected backup, you will need to provide this password. Store this password securely as there is no way to recover the backup without it.
 {% endconfiguration_basic %}
 
 Example action:
