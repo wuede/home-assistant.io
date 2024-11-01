@@ -35,7 +35,12 @@ process.
 The {% my developer_call_service service="backup.create" %} action can be used
 to create a backup for your Home Assistant instance.
 
-The action has no additional options or parameters.
+All parameters for the `backup.create` action are optional.
+
+{% configuration_basic %}
+password:
+  description: Encrypt the backup file with a password.
+{% endconfiguration_basic %}
 
 Example action:
 
@@ -57,6 +62,8 @@ automation:
     actions:
       - alias: "Create backup now"
         action: backup.create
+        data:
+          password: !secret backup_password
 ```
 
 ## Restoring a backup
