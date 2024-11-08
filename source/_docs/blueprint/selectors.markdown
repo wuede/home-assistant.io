@@ -1087,7 +1087,7 @@ mode:
   default: slider
 as_int:
   description: Force the resulting number into an integer.
-  type: bool
+  type: boolean
   required: false
 {% endconfiguration %}
 
