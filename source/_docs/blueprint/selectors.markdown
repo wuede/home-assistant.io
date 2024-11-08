@@ -1086,7 +1086,7 @@ mode:
   required: false
   default: slider
 as_int:
-  description: Force the resulting number into an integer.
+  description: Coerce the resulting number into an integer.
   type: boolean
   required: false
 {% endconfiguration %}
