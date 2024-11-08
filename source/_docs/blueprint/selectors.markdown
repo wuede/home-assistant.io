@@ -1085,9 +1085,16 @@ mode:
   type: string
   required: false
   default: slider
+as_int:
+  description: Force the resulting number into an integer.
+  type: bool
+  required: false
 {% endconfiguration %}
 
 The output of this selector is a number, for example: `42`
+
+Please note that the user input is never rounded, regardless of the step,
+and will always return a float unless `as_int` is set to `True`.
 
 ### Example number selectors <!-- omit from toc -->
 
