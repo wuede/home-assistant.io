@@ -1089,6 +1089,7 @@ as_int:
   description: Coerce the resulting number into an integer.
   type: boolean
   required: false
+  default: slider
 {% endconfiguration %}
 
 The output of this selector is a number, for example: `42`
