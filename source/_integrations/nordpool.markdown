@@ -148,7 +148,7 @@ Use a trigger template entity to see tomorrow's lowest price.
 template:
   - trigger:
       - trigger: time_pattern
-        minutes: /1
+        hours: /1
     action:
       - action: nordpool.get_prices_for_date
         data:
