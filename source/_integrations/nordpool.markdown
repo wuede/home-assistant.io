@@ -73,21 +73,32 @@ The daily average sensor is not enabled by default.
 
 The `Exchange rate` sensor is not enabled by default.
 
-## Custom actions
+## Actions
 
 ### Get price for date
 
-As the integration entities only provides price information for the current date, use the custom action "Get price for date" to retrieve pricing information for the last two months up until tomorrow.
-
-Providing the areas and currency are optional, and will use the integration configured if omitted.
+The integration entities provide price information only for the current date. Use the "Get price for date" action to retrieve pricing information for any date within the last two months or for tomorrow.
++
++The areas and currency parameters are optional. If omitted, the values configured in the integration will be used.
 
 See [examples](#examples) how to use in a trigger template sensor.
 
+{% configuration_basic %}
+Nord Pool configuration entry:
+  description: Select the Nord Pool configuration entry to target.
+Date:
+  description: Pick the date to fetch prices for.
+Areas:
+  description: Select one or multiple market areas to create sensors for. If omitted it will use the areas from the configuration entry.
+Currency:
+  description: Currency to display prices in. EUR is the base currency in Nord Pool prices.  If omitted it will use the areas from the configuration entry.
+{% endconfiguration_basic %}
+
 {% note %}
 
-The public api only allows to see past pricing information up to 2 months.
+The public API only allows us to see past pricing information for up to 2 months.
 
-Tomorrow's prices are typically released around 13:00 CET, and therefore trying to get tomorrow's prices before that time will generate an error which needs to be considered in such use-case.
+Tomorrow's prices are typically released around 13:00 CET, and trying to get them before that time will generate an error that needs to be considered in such a case.
 
 {% endnote %}
 
