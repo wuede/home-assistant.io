@@ -73,7 +73,42 @@ The daily average sensor is not enabled by default.
 
 The `Exchange rate` sensor is not enabled by default.
 
-## Example
+## Custom actions
+
+### Get price for date
+
+As the integration entities only provides price information for the current date, use the custom action "Get price for date" to retrieve pricing information for the last two months up until tomorrow.
+
+Providing the areas and currency are optional, and will use the integration configured if omitted.
+
+See [examples](#examples) how to use in a trigger template sensor.
+
+{% note %}
+
+The public api only allows to see past pricing information up to 2 months.
+
+Tomorrow's prices are typically released around 13:00 CET, and therefore trying to get tomorrow's prices before that time will generate an error which needs to be considered in such use-case.
+
+{% endnote %}
+
+#### Example action with data
+
+{% raw %}
+
+```yaml
+action: nordpool.get_prices_for_date
+data:
+  config_entry: 1234567890a
+  date: "2024-11-10"
+  areas:
+    - SE3
+    - SE4
+  currency: SEK
+```
+
+{% endraw %}
+
+## Examples
 
 A simple template sensor to add VAT and a fixed cost from an `input_number` entity
 
@@ -90,6 +125,39 @@ template:
           {% set add_cost = states('input_number.add_fixed_cost') | float(0) %}
           # Add fixed cost to the spot price and add VAT (25%)
           {{ ((cost + add_cost) * 1.25) | round(2, default=0) }}
+```
+
+{% endraw %}
+
+Use a trigger template entity to see tomorrow's lowest price.
+
+{% raw %}
+
+```yaml
+template:
+  - trigger:
+      - trigger: time_pattern
+        minutes: /1
+    action:
+      - action: nordpool.get_prices_for_date
+        data:
+          config_entry: 1234567890A
+          date: "{{ now().date() + timedelta(days=1) }}"
+          areas:
+            - SE3
+          currency: SEK
+        response_variable: tomorrow_price
+    sensor:
+      - name: Tomorrow lowest price
+        unique_id: se3_tomorrow_low_price
+        state: >
+          {% set data = namespace(prices=[]) %}
+          {% for state in tomorrow_price['SE3'] %}
+            {% set data.prices = data.prices + [state.price] %}
+          {% endfor %}
+          {{min(data.prices)}}
+        attributes:
+          data: "{{ tomorrow_price['SE3'] }}"
 ```
 
 {% endraw %}
