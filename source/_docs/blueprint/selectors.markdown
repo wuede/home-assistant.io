@@ -1087,7 +1087,7 @@ mode:
   default: slider
 {% endconfiguration %}
 
-The output of this selector is a number, for example: `42`
+The output of this selector is a number, for example: `42.59`
 
 Please note that:
 - if the step is a `float` (eg. `step=0.1` or `step=1.0`) the user input is never rounded.
