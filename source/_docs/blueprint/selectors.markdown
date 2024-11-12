@@ -1091,7 +1091,7 @@ The output of this selector is a number, for example: `42.59`
 
 Please note that:
 - if the step is a `float` (eg. `step=0.1` or `step=1.0`) the user input is never rounded.
-- if the step is an `integer` (eg. `step=1`) passing a number with decimal precision will be rejected (eg. `80.0` will converted to `80`, `80.1` will be rejected).
+- if the step is an `integer` (eg. `step=1`) passing a number with decimal precision will be rejected (eg. `80.0` will converted to `80` and `80.1` will be rejected).
 
 ### Example number selectors <!-- omit from toc -->
 
