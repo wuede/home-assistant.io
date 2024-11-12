@@ -1085,17 +1085,13 @@ mode:
   type: string
   required: false
   default: slider
-as_int:
-  description: Coerce the resulting number into an integer.
-  type: boolean
-  required: false
-  default: slider
 {% endconfiguration %}
 
 The output of this selector is a number, for example: `42`
 
-Please note that the user input is never rounded, regardless of the step,
-and will always return a float unless `as_int` is set to `True`.
+Please note that:
+- if the step is a `float` (eg. `step=0.1` or `step=1.0`) the user input is never rounded.
+- if the step is an `integer` (eg. `step=1`) passing a number with decimal precision will be rejected (eg. `80.0` will converted to `80`, `80.1` will be rejected).
 
 ### Example number selectors <!-- omit from toc -->
 
