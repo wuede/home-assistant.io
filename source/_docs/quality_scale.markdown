@@ -90,7 +90,7 @@ The platinum tier has the following characteristics:
 ## Special tiers
 
 There are 4 special tiers that are used for integrations that don't have a place on the scaled tier list.
-This is because they are either an internal part of {% term "Home Assistant Core" %, they are not in {% term "Home Assistant Core" % at all, or they don't meet the minimum requirements to be graded against the scaled tiers.
+This is because they are either an internal part of {% term "Home Assistant Core" %}, they are not in {% term "Home Assistant Core" %} at all, or they don't meet the minimum requirements to be graded against the scaled tiers.
 
 The special tiers are defined as follows.
 
@@ -121,13 +121,13 @@ Characteristics:
 
 ### 💾 Legacy
 
-Legacy integrations are older integrations that have been part of Home Assistant for many years, possibly since its inception. They can only be configured through {% term YAML%} files and often lack active maintainers (code owners). These integrations might be complex to set up and do not adhere to current/modern end-user expectations in their use and features.
+Legacy integrations are older integrations that have been part of Home Assistant for many years, possibly since its inception. They can only be configured through {% term YAML %} files and often lack active maintainers (code owners). These integrations might be complex to set up and do not adhere to current/modern end-user expectations in their use and features.
 
 The Home Assistant project encourages the community to help migrate these integrations to the UI and update them to meet modern standards, making these integrations accessible to everyone.
 
 Characteristics:
 
-- Complex setup process; only configurable via {% term YAML%}, without UI-based setup.
+- Complex setup process; only configurable via {% term YAML %}, without UI-based setup.
 - May lack active code ownership and maintenance.
 - Could be missing recent updates or bug fixes.
 - Documentation may still be aimed at developers.
