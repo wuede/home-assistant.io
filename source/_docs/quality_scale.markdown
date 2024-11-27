@@ -90,7 +90,7 @@ The platinum tier has the following characteristics:
 ## Special tiers
 
 There are 4 special tiers that are used for integrations that don't have a place on the scaled tier list.
-This is because they are either an internal part of core, they are not in core at all, or they don't meet the minimum requirements to be graded against the scaled tiers.
+This is because they are either an internal part of {% term "Home Assistant Core" %, they are not in {% term "Home Assistant Core" % at all, or they don't meet the minimum requirements to be graded against the scaled tiers.
 
 The special tiers are defined as follows.
 
@@ -109,13 +109,13 @@ Characteristics:
 
 ### 🏠 Internal
 
-The internal tier is assigned to integrations used internally by Home Assistant. These integrations provide basic components and building blocks for Home Assistant's core program or for other integrations to build on top of it.
+The internal tier is assigned to integrations used internally by Home Assistant. These integrations provide basic components and building blocks for the Home Assistant Core program or for other integrations to build on top of it.
 
 Internal integrations are maintained by the Home Assistant project and subjected to strict architectural design procedures.
 
 Characteristics:
 
-- Internal, built-in building blocks of the Home Assistant core program.
+- Internal, built-in building blocks of the Home Assistant Core program.
 - Provides building blocks for other integrations to use and build on top of.
 - Maintained by the Home Assistant project.
 
