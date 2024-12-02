@@ -427,7 +427,7 @@ Set up the Reolink integration in Home Assistant using the credentials you set i
 
 Removing a directly connected camera/NVR/Home Hub can be done by removing the integration following these steps:
 
-{% include integrations/remove_device_service.md %}
+{% include integrations/remove_device_service_steps.md %}
 
 This will also remove all cameras/chimes connected to the NVR/Home Hub from Home Assistant.
 
