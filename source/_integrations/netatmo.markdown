@@ -121,12 +121,12 @@ Set the heating schedule.
 
 `set_scheduled_room_temperature`
 
-Sets the temperature for the given schedule and room
+Sets the room temperature for the currently active schedule
 
 | Data attribute | Required | Description                           |
 | ---------------------- | -------- | ------------------------------------- |
 | `temperature`          | Yes      | The target temperature for the device.                   |
-| `zone_name`            | Yes      | The name of the schedule. |
+| `zone_name`            | Yes      | The name of the zone. |
 
 ### Set preset mode with end date & time
 
