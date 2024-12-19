@@ -109,7 +109,9 @@ sensor:
     name: temperature derivative
     time_window: 00:05:00
 binary_sensor:
-  - platform: threshold # will switch state not at 0°C/min but 0.1°C/min or -0.1°C/min depending on the current state of the sensor, respectively
+  - platform: threshold # will switch state not at 0°C/min but
+                        # will switch on when value rises above 0.1°C/min
+                        # will switch off when value sinks below -0.1°C/min
     entity_id: sensor.temperature_derivative
     upper: 0
     hysteresis: 0.1 # sensor 

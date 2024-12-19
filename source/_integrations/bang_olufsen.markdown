@@ -69,6 +69,24 @@ A number of features are available through the media player entity:
      - Connect to, expand to or unexpand devices.
      - Set all connected Beolink devices to standby.
 
+## Limitations
+
+Currently, some features of the Mozart platform such as:
+
+- Creating timers and alarms
+- Retrieving detailed alarm and timer information
+
+And more advanced app-centric features such as:
+
+- Creating presets
+- Creating listening positions
+- Creating sound modes
+- Creating stereo pairs
+- Adjusting specific sound settings
+- Pairing remotes
+
+These features are not available through the API. Some may become available at a later point, but until then the [Bang & Olufsen App](https://www.bang-olufsen.com/en/dk/story/apps) can be used to configure these settings and features.
+
 ## Actions
 
 ### play_media actions

@@ -13,7 +13,7 @@ related:
     title: Best practices with Assist
 ---
 
-The simplest and most effective way to use Assist is to leverage the voice providers (for speech-to-text and test-to-speech) included in [Home Assistant Cloud](/voice_control/voice_remote_cloud_assistant/) 
+The simplest and most effective way to use Assist is to leverage the voice providers (for speech-to-text and text-to-speech) included in [Home Assistant Cloud](/voice_control/voice_remote_cloud_assistant/) 
 
 If you are interested in setting up a fully local voice assistant, follow this setup:
 
