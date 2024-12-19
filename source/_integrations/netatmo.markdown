@@ -117,16 +117,16 @@ Set the heating schedule.
 | ---------------------- | -------- | ------------------------------------- |
 | `schedule_name`        | Yes      | The name of the schedule to activate. |
 
-### Set scheduled room temperature
+### Set scheduled thermostat temperature
 
-`set_scheduled_room_temperature`
+`set_scheduled_thermostat_temperature`
 
-Sets the room temperature for the currently active schedule
+Sets the thermostat temperature for the given device, temperature set and currently active schedule
 
 | Data attribute | Required | Description                           |
 | ---------------------- | -------- | ------------------------------------- |
 | `temperature`          | Yes      | The target temperature for the device.                   |
-| `zone_name`            | Yes      | The name of the zone. |
+| `temperature_set`      | Yes      | The name of the temperature set. |
 
 ### Set preset mode with end date & time
 
